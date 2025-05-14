@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Generator</h1>
+  <button onclick="generateItem()">Generate Item</button>
+  <button onclick="generateScanero()">Generate Scanero</button>
+
+  <div id="output"></div>
+
+  <script>
+    const items = ["Sword", "Shield", "Potion", "Bow", "Helmet"];
+    const scaneros = ["Scanero Alpha", "Scanero Beta", "Scanero Gamma", "Scanero Delta"];
+
+    function generateItem() {
+      const randomItem = items[Math.floor(Math.random() * items.length)];
+      document.getElementById("output").textContent = "Item: " + randomItem;
+    }
+
+    function generateScanero() {
+      const randomScanero = scaneros[Math.floor(Math.random() * scaneros.length)];
+      document.getElementById("output").textContent = "Scanero: " + randomScanero;
+    }
+  </script>
+</body>
+</html>
